@@ -1,0 +1,11 @@
+body{
+    background: burlywood;
+}
+
+li:first-child {
+    color: green;
+}
+
+ini-link:visited{
+    color: red;
+}

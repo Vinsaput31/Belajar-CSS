@@ -1,0 +1,135 @@
+body{
+    background: rgba(9,9,62,0.4);
+    margin: 0;
+}
+
+#dasar{
+    width: 800px;
+    margin: auto;
+    position: relative;
+    margin-top: 220px;
+    border:5px solid rgb(9,9,62);
+    background:linear-gradient(to top,white, rgb(20,124,232),rgba(20,124,232,0.4)); 
+}
+#top{
+    width: 100%;
+    height: 200px;
+    background-image: url("latihan2.png");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+    text-align: center;
+    
+}
+
+ul{
+    padding-left: 0;
+    margin-top:0;
+    margin-bottom: 5px;
+}
+
+ul li{
+    display: inline-block;
+    padding: 5px;
+}
+
+a {
+    text-decoration:none;
+    color:rgb(190, 9, 39);
+}
+
+#judul{
+    padding-left: 5px;
+    margin-bottom: 5px;
+    
+}
+
+ul li:hover{
+    background: rgb(190, 194, 143);
+    color: black;
+
+}
+
+#box2{
+    height: 300px;
+    background-image: url("mum-working.jpg");
+    background-size: cover;
+    background-position: 0 -800;
+    border-top: 3px solid rgb(168, 27, 168);
+    border-bottom: 3px solid crimson;
+}
+
+#judul2{
+    text-align: center;
+    color: rgb(3, 53, 28);
+}
+
+#author{
+    font-style: italic;
+    margin-left: 5px;
+}
+
+#main {
+    margin-top: 0;
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: justify;
+    float: left;
+    width: 500px;
+}
+
+#ibu{
+    margin-left: 5px;
+}
+
+#copy{
+    background: black;
+    text-align: center;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-top: 10px;
+}
+
+#clear{
+    clear: left;
+}
+
+#profil{
+    float: right;
+    margin-right: 10px;
+
+    width: 250px;
+}
+
+#profil h4{
+    font-weight: 500;
+    background-color: rgb(226, 43, 52);
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+#twibbon{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-image: url("ribbon-png-808.png");
+    background-size: cover;
+    position: absolute;
+    top:-16px;
+    left: 615px;
+}
+
+#vivin{
+    width: 100px;
+    border: 10px double black;
+    float: left;
+    margin-right: 10px;
+}
+
+#profil p {
+    margin-left: 10px;
+    text-align: justify;
+}
+

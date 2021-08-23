@@ -1,0 +1,69 @@
+/*  ini latihan flex box
+body{
+    background-color: cornflowerblue;
+}
+
+.container{
+    display: flex;
+    background-color: indianred;
+    flex-wrap: wrap;
+}
+
+#body{
+    display: flex;
+    width: 100%;
+
+}
+
+.left{
+    flex: 1;
+}
+
+#header{
+    background-color: purple;
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
+    
+}
+
+#aside{
+    background-color: blue;
+    margin: 0;
+}
+
+#nav{
+    background-color: red;
+    margin: 0;
+    
+}
+#main{
+    background-color:orange;
+    margin: 0;
+    flex: 3;
+}
+#footer{
+    background-color:green;
+    margin: 0;
+    width: 100%;
+    
+} */
+
+.item{
+    background-color: lightblue;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.container{
+    width: 60%;
+    margin:50px auto;
+    background-color: lightgreen;
+    display: grid;
+    grid-template-columns: 200px 300px  50px auto;
+    grid-template-rows: 100px 400px;
+    /* grid-auto-rows: 300px; */
+    grid-auto-flow: column;
+}
+
+

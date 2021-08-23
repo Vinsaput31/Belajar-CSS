@@ -1,0 +1,49 @@
+body{
+    background:rgba(107, 17, 129, 0.3);
+}
+
+.judul1 {
+    color:rgb(4, 67, 70);
+    text-align: center;
+}
+
+.header2{
+    color: crimson;
+    text-align: center;
+}
+p {
+    background:none;
+}
+
+#author{
+    color: rgb(12, 7, 75);
+    font-style: italic;
+    font-weight: 600;
+}
+
+#sampul {
+    height: 23pc;
+    width: 98%;
+    background-image:linear-gradient(rgb(145, 170, 252),rgba(34,120,200,0.3)) ,url(latihan2.png);
+    background-size: cover;
+    border: 6px dotted black;
+}
+
+#gambar {
+    margin: 80px 40px 80px 80px;
+    border: 4px solid black;
+    padding: 20px;
+}
+
+.item{
+    background: lightcoral;
+    width: 40px;
+    line-height: 40px;
+    margin: 10px;
+    text-align: center;
+    display: flex;
+}
+
+#container{
+    background-color: lightseagreen;
+}

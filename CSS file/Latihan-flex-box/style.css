@@ -1,0 +1,408 @@
+body{
+    margin: 0 0;
+    padding : 0;
+    background-image: url("spring.png");
+}
+
+/* navigasi */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    background-color: rgb(17, 180, 172);
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    /* background-color: blue; */
+    width: 35%;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: cornsilk;
+}
+
+.menu input{
+    display: none;
+}
+
+
+
+
+/* REsponsive */
+
+@media screen and (max-width:768px) {
+    nav ul{
+        width:50%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    nav ul{
+        display: flex;
+        flex-direction: column;
+        background:linear-gradient(to bottom,rgba(17, 180, 172,0.9),rgb(179, 218, 209));
+        position: absolute;
+        top: 50px;
+        right: 0;
+        width: 75%;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    nav ul li a{
+        color: rgb(11, 7, 31);
+        font-weight: 550;
+    }
+
+    a:hover{
+        background-color: rgb(11, 6, 61);
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        height: 25px;
+        justify-content: space-between;
+        transform-origin: 0 0;
+        /* background-color: blueviolet; */
+        position: relative;
+    }
+    nav .menu span{
+        width: 30px;
+        height: 3px;
+        display: block;
+        border-radius: 3px;
+        background-color: black;
+        transition: all 1s;
+    
+    }
+    nav .menu input{
+        width: 30px;
+        top: -10px;
+        height: 42px;
+        display: block;
+        background-color: rgb(190, 36, 36);
+        opacity: 0;
+        position: absolute;
+        cursor: pointer;
+        z-index: 2;
+        
+    }
+
+    .menu input:checked ~ span:nth-child(2){
+        transform:translate(0,11px) rotate(45deg);
+        background-color: blanchedalmond;
+        /* transform: translateX(2px) ; */
+    }
+
+    .menu input:checked ~ span:nth-child(4){
+        transform:translate(0,-11px) rotate(-45deg);
+        background-color: blanchedalmond;
+    }
+
+    .menu input:checked ~ span:nth-child(3){
+        opacity: 0;
+        background-color: blanchedalmond;
+    }
+}
+
+
+
+
+
+
+
+h1{
+    margin: 115px auto;
+    font-size: 65px;
+    color: darkgray;
+    text-align: center;
+    text-shadow: 0 5px 2px black;
+}
+
+.containerSatu{
+    width: 100%;
+    padding: 5px;
+    /* border: 5px solid pink; */
+    margin: 15px auto;
+    
+    box-sizing: border-box;
+
+}
+
+.main{
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    padding: 5px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    
+
+}
+.main h3{
+    text-align: center;
+}
+
+h4{
+    text-align: center;
+
+}
+.side-left{
+    /* border: 3px solid black; */
+    padding: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    box-sizing: border-box;
+    width: 100%;
+    
+}
+
+.side-right{
+    /* border: 3px solid black; */
+    padding: 2px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    box-sizing: border-box;
+    width: 100%;
+
+    
+}
+
+.container-dua{
+    width: 100%;
+    /* border: 2px solid black; */
+    margin: 50px auto;
+    border-radius: 1.2px;
+    margin: 5-px auto;
+}
+
+.card-1{
+    background-color: blueviolet;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin: 0 20px 10px;
+    padding:10px 0;
+    /* transition: 2s; */
+}
+
+.card-1:hover,.card-2:hover,.card-3:hover,.card-4:hover{
+    transform: scale(1.03);
+    /* border-radius: 25px; */
+}
+
+button{
+    color: rgb(37, 43, 37);
+    font-size: 20px;
+    padding: 0;
+    margin-top: 20px;
+    background-color: darkgrey;
+    text-transform: uppercase;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button:hover{
+    scale: 1.2;
+}
+
+.card-2{
+    background-color: rgb(65, 76, 221);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin: 0 20px 10px;
+    /* transition: 1s; */
+    padding:10px 0;
+    /* line-height: 150px; */
+}
+
+.card-3{
+    background-color: rgb(22, 214, 118);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin: 0 20px 10px;
+    padding:10px 0;
+    /* line-height: 150px; */
+}
+
+.card-4{
+    background-color: rgb(211, 87, 87);
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    margin: 0 20px 10px;
+    padding:10px 0;
+    /* line-height: 150px; */
+}
+
+#h2{
+    text-align: center;
+    color: crimson;
+    margin: 25px auto;
+}
+
+/* .container3{
+    width: 100%;
+    margin: 5px auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sampul{
+    width: 50%;
+}
+
+.sampul img{
+    width: 100%;
+
+} */
+
+.galeri{
+    width: 80%;
+    margin: 50px auto;
+    border: 5px double grey;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    padding:0;
+    gap: 5px;
+
+}
+
+.galeri img{
+    display: block;
+    width: 100%;
+}
+
+#check{
+    font-size: 32px;
+    text-shadow: 0 4px 2px gray;
+    color: rgb(59, 63, 2);
+}
+
+
+.container-empat{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    background-color: rgb(175, 168, 168);
+    width: 50%;
+    margin: 5px auto 15px;
+    overflow: hidden;
+    border-radius: 10px;
+
+}
+
+#box2{
+    transform: scale(1.05);
+}
+
+.box h4{
+    background-color: rgb(75, 73, 73);
+    margin: 0 auto;
+    padding: 70px 15px;
+    color: white;
+    font-size: 35px;
+    padding: 50px;
+    box-sizing: border-box;
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-content:center;
+    
+}
+
+#box2 h4{
+    font-size: 45px;
+}
+.box p{
+    padding: 15px;
+}
+
+@media(min-width:600px){
+    .containerSatu{
+        display: flex;
+    }
+
+    .main{
+        flex: 5;
+        order: 2;
+    }
+
+    .side-left{
+        flex: 1;
+        order:1;
+    }
+
+    .side-right{
+        flex: 1;
+        order: 3;
+    }
+
+    .container-dua{
+        justify-content: space-between;
+        width: 1000px;
+        margin: 5px auto 0;
+        display: flex;
+        /* background-color: violet; */
+    }
+    .card-1,.card-2,.card-3,.card-4{
+        width: 22%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding: 50px 0;
+
+    }
+
+    /* .container3{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sampul{
+        width:25%;
+        margin-bottom: 20px;
+    } */
+
+    .container-empat{
+        display: flex;
+        width: 75%;
+        margin: 100px auto;
+        flex-direction: row;
+    }
+
+    .box{
+        margin: 5px;
+    }
+
+}
