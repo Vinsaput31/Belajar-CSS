@@ -4,7 +4,7 @@
 }
 
 body{
-    margin:50px;
+    margin:0px 50px;
     background-color: rgb(247,224,200);
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
@@ -12,6 +12,7 @@ body{
 
 #header{
     display: grid;
+    margin-top: 50px;
     /* background-color: rgb(100, 109, 109); */
 }
 
@@ -30,7 +31,7 @@ body{
 }
 
 .sampul{
-    background-image: url("image1.jpeg");
+    background-image:linear-gradient(to top,rgba(128, 0, 128, 0.616),rgba(255, 255, 255, 0.438)), url("image1.jpeg");
     /* height: 450px; */
     background-size: cover;
     background-position: center;
@@ -43,7 +44,7 @@ body{
 
 
 .barang1{
-    background-image: url('image2.jpeg');
+    background-image: linear-gradient(to top right,rgba(241, 6, 241, 0.616),rgba(255, 255, 255, 0.438)65%),url('image2.jpeg');
     grid-area: barang1;
     background-position: center;
     background-size: cover;
@@ -55,7 +56,7 @@ body{
 }
 
 .barang2{
-    background-image: url('image3.jpeg');
+    background-image: linear-gradient(to top left,rgba(255, 6, 255, 0.616),rgba(255, 255, 255, 0.438)65%),url('image3.jpeg');
     grid-area: barang2;
     background-position: center;
     background-size: cover;
@@ -130,7 +131,8 @@ nav p{
 }
 
 main{
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
     background-color: rgb(243, 214, 184);
     padding: 50px 40px 150px;
 }
@@ -148,7 +150,7 @@ main{
 .service{
     display: grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap: 5px;
+    gap: 8px;
     justify-content: center;
     /* transition: 1s; */
 }
@@ -160,12 +162,6 @@ main{
     border-radius: 5px;
     position: relative;
 
-}
-main h2{
-    text-align: center;
-    grid-area: service;
-    font-size: 45px;
-    margin-bottom: 50px;
 }
 
 
@@ -208,8 +204,8 @@ main h2{
     /* grid-template-columns: 1fr 1fr 1fr 1fr; */
     grid-template-columns: repeat(auto-fit,minmax(24%,1fr));
     gap: 5px;
-    border: rgb(100, 96, 96) double 3px;
-    box-shadow: 3px 3px 3px gray;
+    /* border: rgb(100, 96, 96) double 3px; */
+    /* box-shadow: 3px 3px 3px gray; */
     padding: 20px;
 }
 
@@ -221,12 +217,6 @@ img{
     width: 100%;
 }
 
-#gallery{
-    margin: 50px;
-    text-align: center;
-    font-size: 45px;
-}
-
 footer{
     margin-top: 50px;
     background-color: rgb(243, 214, 184);
@@ -234,17 +224,13 @@ footer{
     font-weight: 400;
 }
 
-footer h2{
-    font-size: 45px;
-    text-align: center;
-    margin-bottom: 50px;
-}
-
 .medsos{
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(auto-fit,minmax(100px,1fr) );
-    justify-content: space-evenly;
+    justify-content: space-between;
     margin: 50px;
+    /* background-color: teal; */
+    line-height: 25px;
 }
 
 .label{
@@ -265,6 +251,46 @@ footer h2{
     color: wheat;
     padding: 10px;
 }
+
+.subjudul{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    grid-area: service;
+    font-size: 45px;
+    margin-bottom: 50px;
+    color: rgb(39, 25, 73);
+    font-family: 'Chewy', cursive;
+    /* margin-top: 50px; */
+}
+
+.subjudul::after{
+    content: '';
+    width: 35px;
+    height: 70px;
+    background:linear-gradient(to bottom,rgba(252, 1, 239, 0.795),rgb(255, 173, 244) ) ;
+    position: absolute;
+    border-radius: 7px;
+    top: -20px;
+    left: 50%;
+    z-index: -1;
+    transform: rotate(40deg);
+}
+
+.subjudul::before{
+    content: '';
+    width: 10px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(241, 200, 124);
+    top: 15px;
+    left: 49.3%;
+    z-index: -1;
+    transform: rotate(40deg);
+    border-radius: 5px;
+}
+
+
 @media screen and (max-width:1200px) {
     nav{
         order: -1;
