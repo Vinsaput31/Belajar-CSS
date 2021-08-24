@@ -4,9 +4,7 @@
 }
 
 body{
-    margin:50px auto;
-    width: 80%;
-    /* background: linear-gradient(to top,rgba(88, 252, 102, 0.521), rgba(255, 255, 255, 0.3)) ; */
+    margin:50px;
     background-color: rgb(247,224,200);
     font-family: 'Josefin Slab', serif;
     font-weight: 600;
@@ -14,15 +12,17 @@ body{
 
 #header{
     display: grid;
+    /* background-color: rgb(100, 109, 109); */
 }
 
 .hero{
-    height: 450px;
+    min-height: 450px;
+    margin: 0 auto;
+    width: 100%;
     display: grid;
     grid-template-areas: 
-    'sampul sampul barang1'
-    'sampul sampul barang2';
-    /* box-shadow: 3px 3px 4px lightcoral; */
+    'sampul sampul sampul barang1'
+    'sampul sampul sampul barang2';
     border: 5px solid rgba(195,214,226,1);
     border-right: 0;
     gap: 4px ;
@@ -87,7 +87,7 @@ nav{
 
 }
 
-ul{
+nav ul{
     list-style: none;
     /* display: flex; */
     display: grid;
@@ -101,20 +101,20 @@ ul{
     /* padding: 15px; */
 }
 
-ul li{
+nav ul li{
     background-color: rgba(243, 168, 155, 1);
     padding: 5px;
     text-align: center;
     box-sizing: border-box;
 }
 
-ul li a{
+nav ul li a{
     text-decoration: none;
     
     color: rgb(20, 20, 20);
 }
 
-ul li a:hover{
+nav ul li a:hover{
     background-color: rgb(221, 8, 79);
     padding: 5px;
     box-sizing: border-box;
@@ -131,6 +131,8 @@ nav p{
 
 main{
     margin-top: 50px;
+    background-color: rgb(243, 214, 184);
+    padding: 50px 40px 150px;
 }
 
 .service p{
@@ -140,6 +142,7 @@ main{
 
 .service h3{
     text-align: center;
+    box-sizing: border-box;
 }
 
 .service{
@@ -147,6 +150,7 @@ main{
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap: 5px;
     justify-content: center;
+    /* transition: 1s; */
 }
 .service .produk{
     background-color: rgba(245, 187, 165, 0.8);
@@ -157,16 +161,13 @@ main{
     position: relative;
 
 }
-.service h3{
-    margin-top: 15px;
-    box-sizing: border-box;
-}
 main h2{
     text-align: center;
     grid-area: service;
     font-size: 45px;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
+
 
 .popup{
     width: 100%;
@@ -180,6 +181,7 @@ main h2{
     padding: 15px;
     box-sizing: border-box;
     opacity: 0;
+    transition: 1.3s;
 }
 
 .popup p{
@@ -201,12 +203,99 @@ main h2{
     font-weight: 800;
 }
 
+.galeri{
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fit,minmax(24%,1fr));
+    gap: 5px;
+    border: rgb(100, 96, 96) double 3px;
+    box-shadow: 3px 3px 3px gray;
+    padding: 20px;
+}
+
+.galeri {
+    list-style: none;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+#gallery{
+    margin: 50px;
+    text-align: center;
+    font-size: 45px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: rgb(243, 214, 184);
+    padding: 50px 40px 0px;
+    font-weight: 400;
+}
+
+footer h2{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.medsos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr) );
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.label{
+    display: grid;
+    justify-content: center;
+    align-content: flex-end;
+    /* background-color: green; */
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+}
+
+#copy{
+    text-align: center;
+    margin: 50px;
+    margin-bottom: 0;
+    background-color: rgb(0, 0, 0);
+    color: wheat;
+    padding: 10px;
+}
 @media screen and (max-width:1200px) {
     nav{
         order: -1;
         margin-bottom: 20px;
         /* background-color: teal; */
     }
+}
 
+@media screen and (max-width:576px) {
+    .hero{
+        grid-template-areas: 
+        'sampul sampul'
+        'sampul sampul'
+        'sampul sampul'
+        'barang1 barang2' 
+        'barang1 barang2';
+        font-size: 16px;
+        
+    }
 
+    .barang1,.barang2,.sampul{
+        font-size: 13px;
+        font-weight: 500;
+    }
+
+    nav{
+        display: none;
+    }
+
+    .galeri{
+        /* grid-template-columns: repeat(2,1fr ); */
+    }
+    
 }
