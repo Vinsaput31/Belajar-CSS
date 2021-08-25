@@ -34,10 +34,12 @@
     display: inline-block;
     margin: 50px 0;
     text-decoration: none;
-    border: 1px solid black;
+    border: 1px solid rgb(78, 68, 68);
     padding: 10px;
     text-align: center;
     border-radius: 5px;
+    color:orangered;
+    transition: 1s;
 }
 
 .sampul .tombol a:hover{
