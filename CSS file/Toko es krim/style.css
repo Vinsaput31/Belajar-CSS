@@ -79,9 +79,7 @@ nav{
     height: 35px;
     display: grid;
     grid-template-columns: 1fr 2fr;
-    /* background-color: rgba(243, 168, 155, 1); */
     margin-top: 20px;
-    /* padding: 25px; */
     align-content: space-between;
     box-sizing: border-box;
     color: rgb(7, 7, 7);
@@ -90,16 +88,11 @@ nav{
 
 nav ul{
     list-style: none;
-    /* display: flex; */
     display: grid;
-    /* grid-template-columns: repeat(auto-fit,minmax(100px,1fr) ); */
     grid-template-columns: repeat(5,1fr);
     gap: 4px;
-
-    /* background-color: blue; */
     justify-content: space-between;
     align-items:center ;
-    /* padding: 15px; */
 }
 
 nav ul li{
@@ -226,10 +219,8 @@ footer{
 
 .medsos{
     display: flex;
-    grid-template-columns: repeat(auto-fit,minmax(100px,1fr) );
     justify-content: space-between;
     margin: 50px;
-    /* background-color: teal; */
     line-height: 25px;
 }
 
@@ -290,6 +281,11 @@ footer{
     border-radius: 5px;
 }
 
+.menu{
+    opacity: 0;
+}
+
+
 
 @media screen and (max-width:1200px) {
     nav{
@@ -308,6 +304,7 @@ footer{
         'barang1 barang2' 
         'barang1 barang2';
         font-size: 16px;
+        margin-top: 50px;
         
     }
 
@@ -316,12 +313,106 @@ footer{
         font-weight: 500;
     }
 
-    nav{
-        display: none;
+    .menu{
+        display: block;
+        opacity: 1;
+        width: 30px;
+        height: 30px;
+        background-image: url("menu.png");
+        background-size: cover;
+        justify-self: end;
+        cursor: pointer;
+        /* background-color: tomato; */
+        z-index:1000;
+        position: fixed;
+        right: 10px;
     }
 
-    .galeri{
-        /* grid-template-columns: repeat(2,1fr ); */
+    body{
+        margin-top: 0;
     }
+
+    nav{
+        background-color: rgb(248, 178, 166);
+        grid-template-columns: 1fr;
+        justify-content:space-between;
+        padding:5px 20px;
+        margin-top: 0px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        box-sizing: unset;
+    }
+
+
+    nav ul{
+        grid-template-columns:1fr;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        width: 75%;
+        height: 100vh;
+        justify-content: center;
+        align-content: stretch;
+        gap: 0;
+        background-color: rgba(243, 168, 155, 0.908);
+        opacity: 0;
+        z-index: 10;
+    }
+    nav p{
+        font-size: 22px;
+        text-align: center;
+    }
+
+    nav ul li{
+        background:none;
+    }
+
+    .close{
+        position: fixed;
+        width: 30px;
+        height: 30px;
+        /* background-color: rgb(119, 31, 119); */
+        padding: 0;
+        right: 20px;
+        top: 2px;
+        font-size: 500px;
+        opacity: 0;
+        z-index: 11;
+    }
+
+    .close p{
+        font-size: 30px;
+        color: rgb(22, 21, 21);
+    }
+    .aktif{
+        opacity: 1;
+    }
+    
+    .hilang{
+        opacity: 0;
+    }
+
+    .medsos{
+        flex-wrap: wrap;
+    }
+
+    .sosialmedia{
+        text-align: end;
+        margin-top: 20px;
+    }
+
+    footer{
+        padding: 0;
+        padding-top: 50px;
+    }
+
+    #copy{
+        width: 100%;
+        margin:20px 0;
+        box-sizing: border-box;
+    }
+    
     
 }

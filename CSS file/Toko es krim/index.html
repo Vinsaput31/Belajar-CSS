@@ -40,7 +40,15 @@
                 <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
+
+            <div class="menu">
+                <!-- <img src="menu.png" alt=""> -->
+            </div>
+            <div class="close">
+                <p>X</p>
+            </div>
         </nav>
+        
     </section>  
 
 
@@ -131,6 +139,19 @@
         <p id="copy">copyright.2021 my PINK ice</p>
         
     </footer>
+
+    <script>
+        const menu = document.querySelector(".menu")
+        const nav = document.querySelector("nav ul")
+        const tutup = document.querySelector(".close")
+
+        menu.addEventListener('click',function(){
+            menu.classList.toggle('hilang')
+            tutup.classList.toggle('aktif')
+            nav.classList.toggle('aktif')
+
+        })
+    </script>
     
 </body>
 </html>

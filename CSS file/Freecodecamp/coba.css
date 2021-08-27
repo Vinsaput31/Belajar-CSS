@@ -1,0 +1,7 @@
+.hero{
+    background-color: aqua;
+    width: 80%;
+    height: 400px;
+    margin: 50px auto;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
