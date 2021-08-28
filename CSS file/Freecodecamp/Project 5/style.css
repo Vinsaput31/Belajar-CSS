@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0ch;
+}
+
+body{
+    background:linear-gradient(to top right, rgba(0, 0, 0, 0.644) 5%,rgb(44, 44, 44)) ;
+    margin-bottom: 50px;
+}
+
+#welcome-section{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px ;
+    color: white;
+    text-align: center;
+}
+#welcome-section p{
+    color: tomato;
+}
+
+#projects{
+    background-color:rgb(83, 83, 196) ;
+    padding: 50px 0;
+}
+h2{
+    text-align: center;
+    color: white;
+    font-size: 44px;
+    text-decoration: underline;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+.project ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    list-style: none;
+    gap: 50px;
+    column-gap: 150px;
+    margin: 50px;
+}
+
+.project ul li a{
+    text-decoration: none;
+}
+
+.project ul li{
+    background-color: lightgray;
+    padding: 50px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.project ul li img{
+    margin-bottom: 50px;
+    border: 3px solid rgb(73, 73, 73);
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#navbar ul{
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    background-color: rgb(175, 68, 68);
+}
+
+#navbar ul li{
+    padding: 20px;
+    color: white;
+}
+#navbar ul li a{
+    color: white;
+    text-decoration: none;
+}
+#navbar ul li:hover{
+    background-color: rgb(57, 57, 212);
+}
+
+#mediasosial{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+footer{
+    margin-top: 150px;
+    /* background-color: rgba(44, 44, 44,0.6); */
+}
+
+footer p{
+    color: white;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+}
+@media screen and (max-width:576px) {
+
+    .project ul{
+        grid-template-columns: 1fr;
+    }
+
+    #navbar ul{
+        justify-content: space-evenly;
+    }
+}
